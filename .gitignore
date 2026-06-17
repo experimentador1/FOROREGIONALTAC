@@ -1,0 +1,25 @@
+# Dependencias
+node_modules/
+nextjs_space/node_modules/
+
+# Build outputs
+nextjs_space/.next/
+nextjs_space/out/
+
+# Variables de entorno — nunca commitear
+nextjs_space/.env
+nextjs_space/.env.local
+nextjs_space/.env.production
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Prisma generated client
+nextjs_space/node_modules/.prisma/

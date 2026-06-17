@@ -1,0 +1,78 @@
+generator client {
+    provider      = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  password      String
+  role          String    @default("admin")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  news          News[]
+}
+
+model Participant {
+  id                String   @id @default(cuid())
+  fullName          String
+  email             String
+  institution       String
+  participantType   String
+  originInstitution String?
+  researchLine      String?
+  thematicAxis      Int
+  createdAt         DateTime @default(now())
+
+  @@index([email])
+  @@index([thematicAxis])
+}
+
+model Submission {
+  id                String   @id @default(cuid())
+  authorName        String
+  authorInstitution String
+  authorEmail       String
+  title             String
+  thematicAxis      Int
+  summary           String
+  cloudStoragePath  String
+  isPublic          Boolean  @default(false)
+  fileName          String
+  status            String   @default("recibida")
+  createdAt         DateTime @default(now())
+
+  @@index([thematicAxis])
+  @@index([status])
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  status    String   @default("nuevo")
+  createdAt DateTime @default(now())
+}
+
+model News {
+  id          String   @id @default(cuid())
+  title       String
+  excerpt     String
+  content     String
+  imageUrl    String?
+  published   Boolean  @default(true)
+  authorId    String?
+  author      User?    @relation(fields: [authorId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([published])
+}
