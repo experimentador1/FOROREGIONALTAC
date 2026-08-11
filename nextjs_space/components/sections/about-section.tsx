@@ -6,7 +6,7 @@ import { Target, Users, Globe, Lightbulb } from 'lucide-react';
 
 const stats = [
   { value: '3', label: 'Ejes temáticos' },
-  { value: '2', label: 'Días de evento' },
+  { value: '1', label: 'Días de evento' },
   { value: '100%', label: 'Virtual y gratuito' },
   { value: 'Sur-Sureste', label: 'Región COMIE' },
 ];

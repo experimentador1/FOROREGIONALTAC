@@ -11,9 +11,9 @@ const fadeUp = (delay = 0) => ({
 });
 
 const importantDates = [
-  { label: 'Cierre de ponencias', date: '25 ago 2025', icon: FileText },
-  { label: 'Notificación', date: '30 sep 2025', icon: Clock },
-  { label: 'Evento virtual', date: '28–29 oct 2025', icon: Calendar },
+  { label: 'Cierre de ponencias', date: '25 ago 2026', icon: FileText },
+  { label: 'Notificación', date: '30 sep 2026', icon: Clock },
+  { label: 'Evento virtual', date: '11 oct 2026', icon: Calendar },
 ];
 
 export function HeroSection() {
@@ -92,7 +92,7 @@ export function HeroSection() {
           >
             <span className="flex items-center gap-2 bg-white border border-gray-200 shadow-sm px-5 py-2.5 rounded-full text-gray-700 text-sm font-medium">
               <Calendar className="w-4 h-4 text-foro-pink" aria-hidden />
-              28 – 29 de octubre, 2025
+              11 de octubre de 2026
             </span>
             <span className="flex items-center gap-2 bg-white border border-gray-200 shadow-sm px-5 py-2.5 rounded-full text-gray-700 text-sm font-medium">
               <Video className="w-4 h-4 text-foro-pink" aria-hidden />
@@ -114,16 +114,14 @@ export function HeroSection() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden />
             </Link>
 
-            {/* Secundario — borde oscuro, texto oscuro: máximo contraste */}
-            <a
-              href="https://forms.gle/BUCDyTQDxmBKUdLN9"
-              target="_blank"
-              rel="noopener noreferrer"
+            {/* Secundario — va a la página de mesas de trabajo */}
+            <Link
+              href="/ponencias"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white border-2 border-gray-900 text-gray-900 font-bold rounded-full hover:bg-gray-900 hover:text-white transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.02]"
             >
               <FileText className="w-4 h-4" aria-hidden />
               Enviar ponencia
-            </a>
+            </Link>
           </motion.div>
 
           {/* Strip de fechas clave */}

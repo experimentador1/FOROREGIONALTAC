@@ -45,25 +45,12 @@ export function ProgramSection() {
           </div>
         </motion.div>
 
-        {/* Day toggle */}
+        {/* Fecha del evento */}
         <div className="flex justify-center mb-10">
-          <div className="inline-flex bg-white dark:bg-gray-900 rounded-full p-1.5 shadow-md gap-1">
-            <button
-              onClick={() => setActiveDay(0)}
-              className={`px-6 py-3 rounded-full text-sm font-semibold transition-all ${
-                activeDay === 0 ? 'bg-foro-pink text-white shadow-md' : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              Día 1 — 28 Oct
-            </button>
-            <button
-              onClick={() => setActiveDay(1)}
-              className={`px-6 py-3 rounded-full text-sm font-semibold transition-all ${
-                activeDay === 1 ? 'bg-foro-pink text-white shadow-md' : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              Día 2 — 29 Oct
-            </button>
+          <div className="inline-flex bg-white dark:bg-gray-900 rounded-full px-8 py-3.5 shadow-md">
+            <span className="text-sm font-semibold text-foro-pink">
+              9 de octubre de 2026
+            </span>
           </div>
         </div>
 

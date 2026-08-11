@@ -18,20 +18,20 @@ export function InstitutionalBanner() {
 
         {/* Texto institucional — centro izquierdo */}
         <div className="hidden sm:flex flex-col leading-tight">
-          <span className="text-gray-800 font-bold text-sm md:text-base lg:text-lg tracking-tight">
+          <span className="text-gray-700 font-semibold text-xs md:text-sm tracking-tight">
             Universidad Juárez Autónoma de Tabasco
           </span>
-          <span className="text-gray-500 text-xs md:text-sm">
+          <span className="text-gray-400 text-[10px] md:text-xs">
             División Académica de Ciencias y Tecnologías de la Información
           </span>
         </div>
 
         {/* Separador + título del evento — centro */}
         <div className="flex-1 flex flex-col items-center text-center px-4 border-x border-gray-200 hidden md:flex">
-          <span className="text-foro-pink font-bold text-xs uppercase tracking-widest mb-0.5">
+          <span className="text-foro-pink font-extrabold text-sm md:text-base lg:text-lg uppercase tracking-widest mb-0.5">
             Foros Regionales COMIE 2025–2026
           </span>
-          <span className="text-gray-700 font-semibold text-sm lg:text-base leading-tight">
+          <span className="text-gray-800 font-bold text-base lg:text-xl leading-tight">
             Región Sur-Sureste
           </span>
         </div>

@@ -7,7 +7,7 @@ import { MapPin, Mail, Hash, ExternalLink } from 'lucide-react';
 const navLinks = [
   { href: '/#ejes', label: 'Ejes Temáticos' },
   { href: '/#programa', label: 'Programa' },
-  { href: '/#ponentes', label: 'Panel Inaugural' },
+  { href: '/#ponentes', label: 'Mesas de Trabajo' },
   { href: '/noticias', label: 'Noticias' },
   { href: '/registro', label: 'Registro' },
   { href: '/contacto', label: 'Contacto' },
@@ -71,19 +71,27 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Ponencia link */}
+          {/* Ponencias */}
           <div className="md:col-span-2">
-            <p className="text-white text-sm font-semibold mb-4">Ponencias</p>
-            <a
-              href="https://forms.gle/BUCDyTQDxmBKUdLN9"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm text-foro-pink hover:text-foro-pink-dark transition-colors duration-150 cursor-pointer"
-            >
-              Enviar ponencia
-              <ExternalLink className="w-3.5 h-3.5" aria-hidden />
-            </a>
-            <p className="text-xs text-gray-600 mt-2 leading-snug">
+            <p className="text-white text-sm font-semibold mb-4">Mesas de trabajo</p>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/ponencias" className="text-sm text-foro-pink hover:text-foro-pink-dark transition-colors duration-150">
+                  Mesa 1 — Analíticas con equidad
+                </Link>
+              </li>
+              <li>
+                <Link href="/ponencias" className="text-sm text-foro-pink hover:text-foro-pink-dark transition-colors duration-150">
+                  Mesa 2 — IA con saberes situados
+                </Link>
+              </li>
+              <li>
+                <Link href="/ponencias" className="text-sm text-foro-pink hover:text-foro-pink-dark transition-colors duration-150">
+                  Mesa 3 — Pedagogías posibles
+                </Link>
+              </li>
+            </ul>
+            <p className="text-xs text-gray-600 mt-3 leading-snug">
               Dictaminación doble ciego
             </p>
           </div>
@@ -116,7 +124,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-6 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-600">
-          <p>&copy; 2025 UJAT – DACyTI. Foro Regional "Tecnologías del Aprendizaje con Inteligencia Artificial".</p>
+          <p>&copy; 2026 UJAT – DACyTI. Foro Regional "Tecnologías del Aprendizaje con Inteligencia Artificial".</p>
           <p>Organizado en el marco de los Foros Regionales COMIE 2025–2026.</p>
         </div>
       </div>

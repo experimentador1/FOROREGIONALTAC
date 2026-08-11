@@ -1,7 +1,7 @@
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { ContactForm } from '@/components/forms/contact-form';
-import { Mail, MapPin, Hash, ExternalLink, Clock } from 'lucide-react';
+import { Mail, MapPin, ExternalLink, Clock } from 'lucide-react';
 
 export const metadata = {
   title: 'Contacto | Foro Regional TAC-IA',
@@ -9,13 +9,6 @@ export const metadata = {
 };
 
 const contactInfo = [
-  {
-    icon: Mail,
-    label: 'Email del foro',
-    value: 'fororegionalcomie@ujat.mx',
-    href: 'mailto:fororegionalcomie@ujat.mx',
-    linkLabel: 'Enviar mensaje',
-  },
   {
     icon: Mail,
     label: 'Coordinación académica',
@@ -33,14 +26,7 @@ const contactInfo = [
   {
     icon: Clock,
     label: 'Modalidad',
-    value: 'Virtual sincrónico · Acceso gratuito · 28–29 oct 2025',
-    href: null,
-    linkLabel: null,
-  },
-  {
-    icon: Hash,
-    label: 'Redes sociales',
-    value: '#ForosRegionales2026  #ForosCOMIE  #RegionSurSureste',
+    value: 'Virtual sincrónico · Acceso gratuito · 11 oct 2026',
     href: null,
     linkLabel: null,
   },

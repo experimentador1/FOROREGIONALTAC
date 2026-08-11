@@ -14,7 +14,7 @@ export const dynamic = 'force-dynamic';
 export const metadata = {
   metadataBase: new URL(process.env.NEXTAUTH_URL ?? 'http://localhost:3000'),
   title: 'Foro Regional: Tecnologías del Aprendizaje con IA | UJAT DACyTI',
-  description: 'Foro Regional sobre Tecnologías del Aprendizaje con Inteligencia Artificial. 28-29 de octubre 2025. Universidad Juárez Autónoma de Tabasco.',
+  description: 'Foro Regional sobre Tecnologías del Aprendizaje con Inteligencia Artificial. 11 de octubre 2026. Universidad Juárez Autónoma de Tabasco.',
   keywords: 'foro, IA, inteligencia artificial, educación, UJAT, DACyTI, TAC, aprendizaje',
   icons: {
     icon: '/favicon.svg',
@@ -22,7 +22,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Foro Regional: Tecnologías del Aprendizaje con IA',
-    description: 'Foro Regional sobre Tecnologías del Aprendizaje con Inteligencia Artificial. 28-29 de octubre 2025. UJAT DACyTI.',
+    description: 'Foro Regional sobre Tecnologías del Aprendizaje con Inteligencia Artificial. 11 de octubre 2026. UJAT DACyTI.',
     images: ['/og-image.png'],
   },
 };

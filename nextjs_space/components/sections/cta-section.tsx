@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, ExternalLink } from 'lucide-react';
+// Los botones del CTA usan rutas internas; las URLs de formularios viven en lib/forms.ts
 
 export function CTASection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -47,20 +48,17 @@ export function CTASection() {
               Registrarse como asistente
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden />
             </Link>
-            <a
-              href="https://forms.gle/BUCDyTQDxmBKUdLN9"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/ponencias"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white/12 backdrop-blur-sm text-white font-bold rounded-full hover:bg-white/22 transition-all duration-200 border-2 border-white/30 cursor-pointer"
             >
               <ExternalLink className="w-4 h-4" aria-hidden />
-              Enviar ponencia (Google Form)
-            </a>
+              Enviar ponencia — ver mesas
+            </Link>
           </div>
 
-          {/* Fecha límite - urgencia visual */}
           <p className="mt-8 text-white/55 text-sm">
-            Fecha límite de recepción de ponencias: <strong className="text-white/90">25 de agosto de 2025</strong>
+            Fecha límite de recepción de ponencias: <strong className="text-white/90">25 de agosto de 2026</strong>
           </p>
         </motion.div>
       </div>
