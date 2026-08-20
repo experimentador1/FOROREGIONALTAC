@@ -11,8 +11,8 @@ const fadeUp = (delay = 0) => ({
 });
 
 const importantDates = [
-  { label: 'Cierre de ponencias', date: '25 ago 2026', icon: FileText },
-  { label: 'Notificación', date: '30 sep 2026', icon: Clock },
+  { label: 'Cierre de ponencias', date: '20 sep 2026', icon: FileText },
+  { label: 'Notificación', date: '5 oct 2026', icon: Clock },
   { label: 'Evento virtual', date: '15 oct 2026', icon: Calendar },
 ];
 

@@ -79,7 +79,7 @@ const requirements = [
 
 const dates = [
   { icon: FileText,    label: 'Recepción de ponencias',    date: '20 de septiembre de 2026',    emphasis: true },
-  { icon: CheckCircle, label: 'Notificación de resultados', date: '30 de septiembre de 2026', emphasis: false },
+  { icon: CheckCircle, label: 'Notificación de resultados', date: '5 de octubre de 2026', emphasis: false },
   { icon: Calendar,    label: 'Evento virtual sincrónico',  date: '15 de octubre de 2026',   emphasis: false },
 ];
 
