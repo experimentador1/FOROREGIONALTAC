@@ -26,7 +26,7 @@ const contactInfo = [
   {
     icon: Clock,
     label: 'Modalidad',
-    value: 'Virtual sincrónico · Acceso gratuito · 11 oct 2026',
+    value: 'Virtual sincrónico · Acceso gratuito · 15 oct 2026',
     href: null,
     linkLabel: null,
   },

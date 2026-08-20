@@ -13,7 +13,7 @@ const fadeUp = (delay = 0) => ({
 const importantDates = [
   { label: 'Cierre de ponencias', date: '25 ago 2026', icon: FileText },
   { label: 'Notificación', date: '30 sep 2026', icon: Clock },
-  { label: 'Evento virtual', date: '11 oct 2026', icon: Calendar },
+  { label: 'Evento virtual', date: '15 oct 2026', icon: Calendar },
 ];
 
 export function HeroSection() {
@@ -92,7 +92,7 @@ export function HeroSection() {
           >
             <span className="flex items-center gap-2 bg-white border border-gray-200 shadow-sm px-5 py-2.5 rounded-full text-gray-700 text-sm font-medium">
               <Calendar className="w-4 h-4 text-foro-pink" aria-hidden />
-              11 de octubre de 2026
+              15 de octubre de 2026
             </span>
             <span className="flex items-center gap-2 bg-white border border-gray-200 shadow-sm px-5 py-2.5 rounded-full text-gray-700 text-sm font-medium">
               <Video className="w-4 h-4 text-foro-pink" aria-hidden />
