@@ -48,7 +48,7 @@ export default function RegistroPage() {
               </h2>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Si desea participar como ponente, deberá enviar su propuesta a más tardar el{' '}
-                <strong className="text-gray-800">30 de septiembre</strong>, fecha límite para la
+                <strong className="text-gray-800">20 de septiembre</strong>, fecha límite para la
                 recepción de trabajos. La notificación de aceptación se enviará el{' '}
                 <strong className="text-gray-800">5 de octubre</strong>, por lo que le recomendamos
                 completar su registro con anticipación para asegurar su lugar.

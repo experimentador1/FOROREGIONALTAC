@@ -123,7 +123,7 @@ export function SpeakersSection() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-center text-xs text-muted-foreground mt-8"
         >
-          Dictaminación doble ciego · Fecha límite: <strong>25 de agosto de 2026</strong>
+          Dictaminación doble ciego · Fecha límite: <strong>20 de septiembre de 2026</strong>
         </motion.p>
       </div>
     </section>

@@ -58,7 +58,7 @@ export function CTASection() {
           </div>
 
           <p className="mt-8 text-white/55 text-sm">
-            Fecha límite de recepción de ponencias: <strong className="text-white/90">25 de agosto de 2026</strong>
+            Fecha límite de recepción de ponencias: <strong className="text-white/90">20 de septiembre de 2026</strong>
           </p>
         </motion.div>
       </div>
