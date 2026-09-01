@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Calendar, Video, ArrowRight, FileText, Clock } from 'lucide-react';
+import { Calendar, Video, FileText, Clock } from 'lucide-react';
+import { RegistrationButtons } from '@/components/registration-buttons';
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -103,24 +104,16 @@ export function HeroSection() {
           {/* CTAs */}
           <motion.div
             {...fadeUp(0.5)}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+            className="flex flex-col items-center justify-center gap-4 mb-16 max-w-xl mx-auto"
           >
-            {/* Primario */}
-            <Link
-              href="/registro"
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-foro-pink text-white font-bold rounded-full hover:bg-foro-pink-dark transition-all duration-200 shadow-lg shadow-foro-pink/25 hover:shadow-xl hover:scale-[1.03]"
-            >
-              Registrarse gratis
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden />
-            </Link>
+            <RegistrationButtons layout="row" className="w-full" />
 
-            {/* Secundario — va a la página de mesas de trabajo */}
             <Link
               href="/ponencias"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white border-2 border-gray-900 text-gray-900 font-bold rounded-full hover:bg-gray-900 hover:text-white transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.02]"
             >
               <FileText className="w-4 h-4" aria-hidden />
-              Enviar ponencia
+              Plantilla para la redacción de ponencia
             </Link>
           </motion.div>
 

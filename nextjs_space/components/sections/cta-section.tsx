@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, ExternalLink } from 'lucide-react';
-// Los botones del CTA usan rutas internas; las URLs de formularios viven en lib/forms.ts
+import { ExternalLink } from 'lucide-react';
+import { RegistrationButtons } from '@/components/registration-buttons';
 
 export function CTASection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -40,14 +40,9 @@ export function CTASection() {
             donde las voces de la región Sur-Sureste cobran protagonismo.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/registro"
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-foro-pink font-bold rounded-full hover:bg-white/92 transition-all duration-200 shadow-xl hover:shadow-2xl hover:scale-[1.03] cursor-pointer"
-            >
-              Registrarse como asistente
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden />
-            </Link>
+          <div className="flex flex-col items-center justify-center gap-4 max-w-2xl mx-auto">
+            <RegistrationButtons variant="dark" layout="row" className="w-full" />
+
             <Link
               href="/ponencias"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white/12 backdrop-blur-sm text-white font-bold rounded-full hover:bg-white/22 transition-all duration-200 border-2 border-white/30 cursor-pointer"

@@ -1,8 +1,8 @@
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import { FORM_REGISTRO, FORM_REGISTRO_ASISTENTE } from '@/lib/forms';
-// URL activa: https://forms.gle/3nmVfiPp4QTdvbiV7
+import { FORM_REGISTRO } from '@/lib/forms';
 import { ExternalLink, UserCheck, Calendar, Video } from 'lucide-react';
+import { RegistrationButtons } from '@/components/registration-buttons';
 
 export const metadata = {
   title: 'Registro | Foro Regional TAC-IA',
@@ -109,26 +109,7 @@ export default function RegistroPage() {
                       El formulario de registro se realiza a través de Google Forms.
                       Tus datos son tratados de forma confidencial.
                     </p>
-                    <div className="flex flex-col gap-3">
-                      <a
-                        href={FORM_REGISTRO}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full inline-flex items-center justify-center gap-2 py-4 bg-foro-pink text-white font-bold rounded-full hover:bg-foro-pink-dark transition-all duration-200 shadow-lg shadow-foro-pink/25 hover:shadow-xl hover:scale-[1.02] text-base"
-                      >
-                        <ExternalLink className="w-5 h-5" aria-hidden />
-                        Registro de ponentes
-                      </a>
-                      <a
-                        href={FORM_REGISTRO_ASISTENTE}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full inline-flex items-center justify-center gap-2 py-4 bg-white text-foro-pink font-bold rounded-full border-2 border-foro-pink hover:bg-foro-pink/5 transition-all duration-200 hover:scale-[1.02] text-base"
-                      >
-                        <ExternalLink className="w-5 h-5" aria-hidden />
-                        Registro de asistente
-                      </a>
-                    </div>
+                    <RegistrationButtons />
                     <p className="text-xs text-center text-gray-400 mt-4">
                       Se abrirá en una nueva pestaña · Acceso gratuito
                     </p>
