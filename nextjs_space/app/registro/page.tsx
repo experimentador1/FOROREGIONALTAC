@@ -116,7 +116,7 @@ export default function RegistroPage() {
                       className="w-full inline-flex items-center justify-center gap-2 py-4 bg-foro-pink text-white font-bold rounded-full hover:bg-foro-pink-dark transition-all duration-200 shadow-lg shadow-foro-pink/25 hover:shadow-xl hover:scale-[1.02] text-base"
                     >
                       <ExternalLink className="w-5 h-5" aria-hidden />
-                      Completar mi registro (Google Form)
+                      Registro de ponentes
                     </a>
                     <p className="text-xs text-center text-gray-400 mt-4">
                       Se abrirá en una nueva pestaña · Acceso gratuito
