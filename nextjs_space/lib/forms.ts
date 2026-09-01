@@ -18,6 +18,11 @@
 export const FORM_REGISTRO = 'https://forms.gle/3nmVfiPp4QTdvbiV7';
 
 // ---------------------------------------------------------------------------
+// FORMULARIO — Registro de asistente al foro
+// ---------------------------------------------------------------------------
+export const FORM_REGISTRO_ASISTENTE = 'https://forms.gle/bLCRYAEuwHKE2vPP6';
+
+// ---------------------------------------------------------------------------
 // PLANTILLA DE DOCUMENTO — Formato Springer para ponencias
 // Los autores descargan esta plantilla, redactan su ponencia con ese formato
 // y la envían por correo a fororegionalcomie@ujat.mx indicando su mesa.
