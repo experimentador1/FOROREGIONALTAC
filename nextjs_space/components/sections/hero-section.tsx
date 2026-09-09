@@ -122,7 +122,7 @@ export function HeroSection() {
               className="inline-flex items-center gap-2 px-8 py-4 bg-white border-2 border-gray-900 text-gray-900 font-bold rounded-full hover:bg-gray-900 hover:text-white transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.02]"
             >
               <FileText className="w-4 h-4" aria-hidden />
-              Plantilla para la redacción de ponencia
+              Plantilla para Contribuciones
             </a>
           </motion.div>
 
