@@ -25,7 +25,7 @@ const lineamientos = [
   },
   {
     title: 'Originalidad y pertinencia temática',
-    text: 'Los envíos deberán constituir aportes estrictamente inéditos, no encontrarse postulados simultáneamente en otros eventos o publicaciones, y guardar correspondencia directa con los ejes temáticos del foro.',
+    text: 'Los envíos deberán constituir aportes estrictamente inéditos, no encontrarse postulados simultáneamente en otros eventos o publicaciones, y guardar correspondencia directa con los ejes temáticos del foro. Pueden referirse a uso de IA para creaciones, Productos Creados con la asistencia de IA para el apoyo educativo y experiencia pedagógicas sobre el uso de IA.',
   },
   {
     title: 'Integridad académica y uso de IA Generativa',
