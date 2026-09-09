@@ -8,7 +8,6 @@ const navLinks = [
   { href: '/#ejes', label: 'Ejes Temáticos' },
   { href: '/#programa', label: 'Programa' },
   { href: '/#ponentes', label: 'Mesas de Trabajo' },
-  { href: '/noticias', label: 'Noticias' },
   { href: '/registro', label: 'Registro' },
   { href: '/contacto', label: 'Contacto' },
 ];

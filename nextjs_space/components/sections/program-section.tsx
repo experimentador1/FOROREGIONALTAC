@@ -2,29 +2,52 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useState } from 'react';
-import { Clock, Mic2, MessageSquare, FileText, Award, Video, Users } from 'lucide-react';
+import { Clock, Mic2, MessageSquare, Award, Video } from 'lucide-react';
 
-const day1 = [
-  { time: '10:00 AM', title: 'Ceremonia de Inauguración', icon: Award, desc: 'Palabras de bienvenida de autoridades de la UJAT y DACyTI', accent: true },
-  { time: '10:30 AM', title: 'Panel Inaugural', icon: Mic2, desc: '"Voces plurales y TAC en la era de la IA: epistemologías y desafíos regionales" — 3 expertos invitados', accent: true },
-  { time: '12:00 PM', title: 'Mesa de Diálogo — Eje 1', icon: MessageSquare, desc: 'Analíticas de los aprendizajes y la IA' },
-  { time: '12:00 PM', title: 'Mesa de Diálogo — Eje 2', icon: MessageSquare, desc: 'Entornos educativos inteligentes, lenguas y saberes locales' },
-  { time: '12:00 PM', title: 'Mesa de Diálogo — Eje 3', icon: MessageSquare, desc: 'Innovación pedagógica con IA y voces regionales' },
-  { time: '2:00 PM', title: 'Cierre del Día 1', icon: Clock, desc: 'Conclusiones y avance del programa del Día 2' },
-];
-
-const day2 = [
-  { time: '10:00 AM', title: 'Ponencias Arbitradas — Sala 1', icon: FileText, desc: '4 ponencias simultáneas de investigación' },
-  { time: '10:00 AM', title: 'Ponencias Arbitradas — Sala 2', icon: FileText, desc: '4 ponencias simultáneas de investigación' },
-  { time: '12:30 PM', title: 'Sesión Plenaria', icon: Users, desc: 'Síntesis de resultados y diálogo colectivo' },
-  { time: '1:30 PM', title: 'Ceremonia de Clausura', icon: Award, desc: 'Conclusiones, reconocimientos y próximos pasos para la Red Regional', accent: true },
+const events = [
+  {
+    time: '10:00 AM',
+    title: 'Ceremonia de Inauguración',
+    icon: Award,
+    desc: 'Bienvenida por parte de la Dra. Laura Beatríz Vidal Turrubiates, Directora DACyTI UJAT',
+    accent: true,
+  },
+  {
+    time: '10:30 AM',
+    title: 'Conferencia',
+    icon: Mic2,
+    desc: 'Moodle Expert Alfredo González Estrada, Egresado MTAC',
+    accent: true,
+  },
+  {
+    time: '11:00 AM',
+    title: 'MESA 1',
+    icon: MessageSquare,
+    desc: 'Analíticas con equidad: más allá del algoritmo',
+  },
+  {
+    time: '12:00 PM',
+    title: 'MESA 2',
+    icon: MessageSquare,
+    desc: 'Inteligencia artificial con saberes situados',
+  },
+  {
+    time: '1:00 PM',
+    title: 'MESA 3',
+    icon: MessageSquare,
+    desc: 'Pedagogías posibles en la era de la IA',
+  },
+  {
+    time: '2:00 PM',
+    title: 'Clausura del foro',
+    icon: Award,
+    desc: 'Cierre oficial del Foro Regional TAC-IA',
+    accent: true,
+  },
 ];
 
 export function ProgramSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [activeDay, setActiveDay] = useState(0);
-  const events = activeDay === 0 ? day1 : day2;
 
   return (
     <section id="programa" className="py-20 sm:py-28 bg-foro-cream dark:bg-gray-950" ref={ref}>
@@ -49,7 +72,7 @@ export function ProgramSection() {
         <div className="flex justify-center mb-10">
           <div className="inline-flex bg-white dark:bg-gray-900 rounded-full px-8 py-3.5 shadow-md">
             <span className="text-sm font-semibold text-foro-pink">
-              9 de octubre de 2026
+              15 de octubre de 2026
             </span>
           </div>
         </div>
@@ -58,40 +81,45 @@ export function ProgramSection() {
         <div className="relative">
           <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-foro-pink via-foro-pink/50 to-transparent" />
           <div className="space-y-4">
-            {(events ?? []).map((event: any, i: number) => {
-              const Icon = event?.icon ?? Clock;
+            {events.map((event, i) => {
+              const Icon = event.icon;
               return (
                 <motion.div
-                  key={`${activeDay}-${i}`}
+                  key={i}
                   initial={{ opacity: 0, x: -20 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className={`relative pl-16 sm:pl-20 ${
-                    event?.accent ? '' : ''
-                  }`}
+                  className="relative pl-16 sm:pl-20"
                 >
-                  {/* Dot */}
-                  <div className={`absolute left-4 sm:left-6 top-4 w-4 h-4 rounded-full border-2 ${
-                    event?.accent
-                      ? 'bg-foro-pink border-foro-pink shadow-md shadow-foro-pink/30'
-                      : 'bg-white dark:bg-gray-800 border-foro-pink/50'
-                  }`} />
+                  <div
+                    className={`absolute left-4 sm:left-6 top-4 w-4 h-4 rounded-full border-2 ${
+                      event.accent
+                        ? 'bg-foro-pink border-foro-pink shadow-md shadow-foro-pink/30'
+                        : 'bg-white dark:bg-gray-800 border-foro-pink/50'
+                    }`}
+                  />
 
-                  <div className={`rounded-xl p-5 sm:p-6 transition-all hover:shadow-md ${
-                    event?.accent
-                      ? 'bg-gradient-to-r from-foro-pink/5 to-foro-pink-dark/5 border border-foro-pink/20'
-                      : 'bg-white dark:bg-gray-900 shadow-sm'
-                  }`}>
+                  <div
+                    className={`rounded-xl p-5 sm:p-6 transition-all hover:shadow-md ${
+                      event.accent
+                        ? 'bg-gradient-to-r from-foro-pink/5 to-foro-pink-dark/5 border border-foro-pink/20'
+                        : 'bg-white dark:bg-gray-900 shadow-sm'
+                    }`}
+                  >
                     <div className="flex items-start gap-4">
-                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${
-                        event?.accent ? 'bg-foro-pink/10' : 'bg-muted'
-                      }`}>
-                        <Icon className={`w-5 h-5 ${event?.accent ? 'text-foro-pink' : 'text-muted-foreground'}`} />
+                      <div
+                        className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${
+                          event.accent ? 'bg-foro-pink/10' : 'bg-muted'
+                        }`}
+                      >
+                        <Icon
+                          className={`w-5 h-5 ${event.accent ? 'text-foro-pink' : 'text-muted-foreground'}`}
+                        />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <span className="text-xs font-mono font-semibold text-foro-pink">{event?.time}</span>
-                        <h4 className="font-display font-semibold mt-1">{event?.title}</h4>
-                        <p className="text-sm text-muted-foreground mt-1">{event?.desc}</p>
+                        <span className="text-xs font-mono font-semibold text-foro-pink">{event.time}</span>
+                        <h4 className="font-display font-semibold mt-1">{event.title}</h4>
+                        <p className="text-sm text-muted-foreground mt-1">{event.desc}</p>
                       </div>
                     </div>
                   </div>

@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { Calendar, Video, FileText, Clock } from 'lucide-react';
 import { RegistrationButtons } from '@/components/registration-buttons';
+import { TEMPLATE_PONENCIA } from '@/lib/forms';
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -108,13 +108,14 @@ export function HeroSection() {
           >
             <RegistrationButtons layout="row" className="w-full" />
 
-            <Link
-              href="/ponencias"
+            <a
+              href={TEMPLATE_PONENCIA}
+              download="PrototipoSpringer_APA7.docx"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white border-2 border-gray-900 text-gray-900 font-bold rounded-full hover:bg-gray-900 hover:text-white transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.02]"
             >
               <FileText className="w-4 h-4" aria-hidden />
               Plantilla para la redacción de ponencia
-            </Link>
+            </a>
           </motion.div>
 
           {/* Strip de fechas clave */}

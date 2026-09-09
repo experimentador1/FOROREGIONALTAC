@@ -5,7 +5,6 @@ import { AboutSection } from '@/components/sections/about-section';
 import { AxesSection } from '@/components/sections/axes-section';
 import { ProgramSection } from '@/components/sections/program-section';
 import { SpeakersSection } from '@/components/sections/speakers-section';
-import { NewsPreview } from '@/components/sections/news-preview';
 import { CTASection } from '@/components/sections/cta-section';
 
 export default function HomePage() {
@@ -17,7 +16,6 @@ export default function HomePage() {
       <AxesSection />
       <ProgramSection />
       <SpeakersSection />
-      <NewsPreview />
       <CTASection />
       <Footer />
     </main>

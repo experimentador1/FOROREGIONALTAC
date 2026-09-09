@@ -89,7 +89,7 @@ const steps = [
     icon: Download,
     title: 'Descarga la plantilla',
     desc: 'Utiliza la plantilla oficial en formato Springer para redactar tu ponencia. Asegúrate de seguir el formato indicado.',
-    action: { label: 'Descargar plantilla (Google Docs)', href: TEMPLATE_PONENCIA, external: true },
+    action: { label: 'Descargar plantilla (.docx)', href: TEMPLATE_PONENCIA, external: false, download: true },
   },
   {
     num: '2',
@@ -131,15 +131,14 @@ export default function PonenciasPage() {
           {/* CTA rápido a la plantilla */}
           <a
             href={TEMPLATE_PONENCIA}
-            target="_blank"
-            rel="noopener noreferrer"
+            download="PrototipoSpringer_APA7.docx"
             className="inline-flex items-center gap-2.5 px-8 py-4 bg-foro-pink text-white font-bold rounded-full hover:bg-foro-pink-dark transition-all duration-200 shadow-lg shadow-foro-pink/25 hover:shadow-xl hover:scale-[1.03] text-base"
           >
             <Download className="w-5 h-5" aria-hidden />
             Descargar plantilla de formato
           </a>
           <p className="mt-3 text-xs text-gray-400">
-            Formato Springer · Google Docs · Acceso libre
+            Formato Springer APA 7 · Archivo Word (.docx) · Acceso libre
           </p>
         </div>
       </div>
@@ -168,6 +167,7 @@ export default function PonenciasPage() {
                   {step.action && (
                     <a
                       href={step.action.href}
+                      download={step.action.download ? 'PrototipoSpringer_APA7.docx' : undefined}
                       target={step.action.external ? '_blank' : undefined}
                       rel={step.action.external ? 'noopener noreferrer' : undefined}
                       className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-foro-pink hover:text-foro-pink-dark transition-colors group"
@@ -268,13 +268,11 @@ export default function PonenciasPage() {
             </ul>
             <a
               href={TEMPLATE_PONENCIA}
-              target="_blank"
-              rel="noopener noreferrer"
+              download="PrototipoSpringer_APA7.docx"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white font-semibold rounded-full hover:bg-gray-700 transition-all duration-200 text-sm"
             >
               <Download className="w-4 h-4" aria-hidden />
-              Abrir plantilla de formato (Springer)
-              <ExternalLink className="w-3.5 h-3.5 opacity-70" aria-hidden />
+              Descargar plantilla Springer APA 7 (.docx)
             </a>
           </div>
         </section>

@@ -11,7 +11,6 @@ const navLinks = [
   { href: '/#ejes', label: 'Ejes' },
   { href: '/#programa', label: 'Programa' },
   { href: '/#ponentes', label: 'Mesas' },
-  { href: '/noticias', label: 'Noticias' },
   { href: '/contacto', label: 'Contacto' },
 ];
 

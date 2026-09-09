@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const RECIPIENT = 'fororegionalcomie@ujat.mx';
-const RECIPIENT_2 = 'arturo.corona@ujat.mx';
+const RECIPIENT = 'arturo.corona@ujat.mx';
 
 export async function POST(request: Request) {
   try {

@@ -1,6 +1,6 @@
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import { FORM_REGISTRO } from '@/lib/forms';
+import { FORM_REGISTRO, TEMPLATE_PONENCIA } from '@/lib/forms';
 import { ExternalLink, UserCheck, Calendar, Video } from 'lucide-react';
 import { RegistrationButtons } from '@/components/registration-buttons';
 
@@ -56,9 +56,8 @@ export default function RegistroPage() {
               <p className="text-sm text-gray-600 leading-relaxed">
                 Para la elaboración de su trabajo, consulte la{' '}
                 <a
-                  href="https://docs.google.com/document/d/18nuVEqZ4FJXDivKTn-iMV2CKWIps8MSG/edit?usp=share_link&ouid=111029678610108054956&rtpof=true&sd=true"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={TEMPLATE_PONENCIA}
+                  download="PrototipoSpringer_APA7.docx"
                   className="text-foro-pink font-semibold hover:underline inline-flex items-center gap-1"
                 >
                   plantilla de publicación
