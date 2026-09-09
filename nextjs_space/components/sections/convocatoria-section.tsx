@@ -52,7 +52,7 @@ export function ConvocatoriaSection() {
             Participación académica
           </p>
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900 text-center mb-8 leading-snug">
-            Convocatoria de Contribuciones: Ponencias y Textos Breves (Short Papers)
+            Contribuciones: Ponencias y Textos Breves (Short Papers)
           </h2>
 
           <div className="space-y-5 text-gray-600 leading-relaxed text-base sm:text-[1.05rem]">

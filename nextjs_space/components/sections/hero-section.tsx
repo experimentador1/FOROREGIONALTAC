@@ -91,7 +91,7 @@ export function HeroSection() {
             href="#convocatoria"
             className="inline-block text-foro-pink font-semibold text-sm sm:text-base mb-10 hover:underline underline-offset-4"
           >
-            Convocatoria de Contribuciones: Ponencias y Textos Breves (Short Papers) →
+            Contribuciones: Ponencias y Textos Breves (Short Papers) →
           </motion.a>
 
           {/* Info de evento */}
