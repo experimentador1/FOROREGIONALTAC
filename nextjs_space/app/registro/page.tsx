@@ -64,13 +64,25 @@ export default function RegistroPage() {
                   <ExternalLink className="w-3.5 h-3.5 shrink-0" aria-hidden />
                 </a>
                 , donde encontrará el formato y los lineamientos que deberá seguir su ponencia.
+                Modalidades: ponencias (máx. 4,000 palabras) o textos breves (máx. 800 palabras),
+                con hasta 3 autores.
               </p>
+              <a
+                href={TEMPLATE_PONENCIA}
+                download="PrototipoSpringer_APA7.docx"
+                className="inline-flex items-center justify-center gap-2 w-full py-3.5 bg-foro-pink text-white font-bold rounded-full hover:bg-foro-pink-dark transition-all duration-200 text-sm"
+              >
+                Descargar plantilla oficial (.docx)
+              </a>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Las ponencias contarán con <strong className="text-gray-800">DOI</strong>{' '}
                 (Identificador de Objeto Digital), y aquellas seleccionadas como destacadas se
                 integrarán en una memoria del foro, cuya publicación está programada para el{' '}
                 <strong className="text-gray-800">1 de diciembre de 2026</strong>.
               </p>
+              <a href="/#convocatoria" className="text-sm font-semibold text-foro-pink hover:underline inline-block">
+                Ver convocatoria completa →
+              </a>
             </div>
           </div>
 

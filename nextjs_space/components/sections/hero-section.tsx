@@ -80,11 +80,19 @@ export function HeroSection() {
           {/* Subtítulo */}
           <motion.p
             {...fadeUp(0.3)}
-            className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed mb-10"
+            className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed mb-6"
           >
             Espacio académico de intercambio, debate y socialización de investigaciones
             sobre IA en la transformación educativa — con enfoque regional, inclusivo y decolonial.
           </motion.p>
+
+          <motion.a
+            {...fadeUp(0.35)}
+            href="#convocatoria"
+            className="inline-block text-foro-pink font-semibold text-sm sm:text-base mb-10 hover:underline underline-offset-4"
+          >
+            Convocatoria de Contribuciones: Ponencias y Textos Breves (Short Papers) →
+          </motion.a>
 
           {/* Info de evento */}
           <motion.div

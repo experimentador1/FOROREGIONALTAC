@@ -8,6 +8,7 @@ import { InstitutionalBanner } from '@/components/institutional-banner';
 
 const navLinks = [
   { href: '/#inicio', label: 'Inicio' },
+  { href: '/#convocatoria', label: 'Convocatoria' },
   { href: '/#ejes', label: 'Ejes' },
   { href: '/#programa', label: 'Programa' },
   { href: '/#ponentes', label: 'Mesas' },

@@ -3,8 +3,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin, Mail, Hash, ExternalLink } from 'lucide-react';
+import { TEMPLATE_PONENCIA } from '@/lib/forms';
 
 const navLinks = [
+  { href: '/#convocatoria', label: 'Convocatoria' },
   { href: '/#ejes', label: 'Ejes Temáticos' },
   { href: '/#programa', label: 'Programa' },
   { href: '/#ponentes', label: 'Mesas de Trabajo' },
@@ -93,6 +95,14 @@ export function Footer() {
             <p className="text-xs text-gray-600 mt-3 leading-snug">
               Dictaminación doble ciego
             </p>
+            <a
+              href={TEMPLATE_PONENCIA}
+              download="PrototipoSpringer_APA7.docx"
+              className="inline-flex items-center gap-1.5 text-sm text-foro-pink hover:text-foro-pink-dark transition-colors duration-150 mt-3 font-medium"
+            >
+              Plantilla (.docx)
+              <ExternalLink className="w-3 h-3" aria-hidden />
+            </a>
           </div>
 
           {/* Contact */}

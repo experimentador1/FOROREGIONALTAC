@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ExternalLink } from 'lucide-react';
+import { Download, ExternalLink } from 'lucide-react';
 import { RegistrationButtons } from '@/components/registration-buttons';
+import { TEMPLATE_PONENCIA } from '@/lib/forms';
 
 export function CTASection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -35,21 +36,35 @@ export function CTASection() {
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-5 leading-tight">
             ¿Listo para participar?
           </h2>
-          <p className="text-white/80 max-w-xl mx-auto text-lg mb-10 leading-relaxed">
+          <p className="text-white/80 max-w-xl mx-auto text-lg mb-6 leading-relaxed">
             Únete como asistente o comparte tu investigación. El foro es el espacio
             donde las voces de la región Sur-Sureste cobran protagonismo.
+          </p>
+          <p className="text-white/70 max-w-lg mx-auto text-sm mb-10 leading-relaxed">
+            Convocatoria abierta para ponencias (máx. 4,000 palabras) y textos breves
+            (máx. 800 palabras). Usa la plantilla oficial del foro.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 max-w-2xl mx-auto">
             <RegistrationButtons variant="dark" layout="row" className="w-full" />
 
-            <Link
-              href="/ponencias"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white/12 backdrop-blur-sm text-white font-bold rounded-full hover:bg-white/22 transition-all duration-200 border-2 border-white/30 cursor-pointer"
-            >
-              <ExternalLink className="w-4 h-4" aria-hidden />
-              Enviar ponencia — ver mesas
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full">
+              <a
+                href={TEMPLATE_PONENCIA}
+                download="PrototipoSpringer_APA7.docx"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-foro-pink font-bold rounded-full hover:bg-white/92 transition-all duration-200 shadow-xl hover:scale-[1.02] cursor-pointer"
+              >
+                <Download className="w-4 h-4" aria-hidden />
+                Descargar plantilla
+              </a>
+              <Link
+                href="/ponencias"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white/12 backdrop-blur-sm text-white font-bold rounded-full hover:bg-white/22 transition-all duration-200 border-2 border-white/30 cursor-pointer"
+              >
+                <ExternalLink className="w-4 h-4" aria-hidden />
+                Enviar ponencia — ver mesas
+              </Link>
+            </div>
           </div>
 
           <p className="mt-8 text-white/55 text-sm">

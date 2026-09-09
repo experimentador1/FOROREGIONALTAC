@@ -3,7 +3,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
-import { BarChart3, Brain, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
+import { BarChart3, Brain, Sparkles, ArrowRight, CheckCircle, Download } from 'lucide-react';
+import { TEMPLATE_PONENCIA } from '@/lib/forms';
 
 const mesas = [
   {
@@ -101,8 +102,16 @@ export function SpeakersSection() {
                   </div>
                 </div>
 
-                {/* CTA — va a /ponencias */}
-                <div className="px-6 pb-6">
+                {/* CTA */}
+                <div className="px-6 pb-6 space-y-2">
+                  <a
+                    href={TEMPLATE_PONENCIA}
+                    download="PrototipoSpringer_APA7.docx"
+                    className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-foro-pink text-white text-sm font-semibold hover:bg-foro-pink-dark transition-all duration-200"
+                  >
+                    <Download className="w-3.5 h-3.5" aria-hidden />
+                    Descargar plantilla
+                  </a>
                   <Link
                     href="/ponencias"
                     className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full border-2 border-gray-900 text-gray-900 text-sm font-semibold hover:bg-gray-900 hover:text-white transition-all duration-200 group"

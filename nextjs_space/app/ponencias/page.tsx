@@ -68,13 +68,15 @@ const mesas = [
 ];
 
 const requirements = [
-  'Usar obligatoriamente la plantilla de formato provista (estilo Springer)',
-  'Extensión máxima: 8 páginas sin incluir referencias',
-  'Resumen en español e inglés (máx. 250 palabras cada uno)',
-  'Palabras clave: de 3 a 5 términos',
+  'Usar obligatoriamente la plantilla oficial del foro (Springer APA 7)',
+  'Ponencias: máximo 4,000 palabras (resumen, cuerpo, tablas, figuras y referencias)',
+  'Textos breves (Short papers): máximo 800 palabras',
+  'Máximo de tres (3) autores por contribución',
+  'Trabajo inédito, no postulado simultáneamente en otros eventos o publicaciones',
+  'Correspondencia directa con los ejes temáticos del foro',
+  'Si se usó IA Generativa, declarar su uso; no debe superar el 10% del contenido',
   'Citas y referencias en formato APA 7ª edición',
   'Indicar claramente la mesa temática a la que se postula',
-  'Incluir nombre(s), institución, grado académico y correo de contacto',
 ];
 
 const dates = [
@@ -95,7 +97,7 @@ const steps = [
     num: '2',
     icon: BookOpen,
     title: 'Redacta tu ponencia',
-    desc: 'Escribe tu trabajo siguiendo los requisitos de formato. Máximo 8 páginas, resumen bilingüe, referencias en APA 7.',
+    desc: 'Escribe tu trabajo siguiendo los lineamientos: ponencia (máx. 4,000 palabras) o short paper (máx. 800 palabras), APA 7 y plantilla oficial.',
     action: null,
   },
   {
@@ -123,10 +125,16 @@ export default function PonenciasPage() {
           <h1 className="font-display text-3xl sm:text-4xl font-bold tracking-tight mb-4 text-gray-900">
             Envío de Ponencias
           </h1>
-          <p className="text-gray-600 max-w-xl mx-auto leading-relaxed mb-8">
+          <p className="text-gray-600 max-w-xl mx-auto leading-relaxed mb-6">
             Comparte tu investigación o experiencia pedagógica con la comunidad académica
             de la región Sur-Sureste. Las ponencias reciben dictaminación por doble ciego
             y las aprobadas se publican en la memoria electrónica del foro.
+          </p>
+          <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed mb-8">
+            Se admiten <strong className="text-gray-700">ponencias</strong> (máx. 4,000 palabras)
+            y <strong className="text-gray-700">textos breves / short papers</strong> (máx. 800 palabras),
+            con hasta 3 autores, trabajo inédito y uso obligatorio de la plantilla oficial.
+            Si se empleó IA generativa, debe declararse y no superar el 10% del contenido.
           </p>
           {/* CTA rápido a la plantilla */}
           <a
@@ -135,10 +143,15 @@ export default function PonenciasPage() {
             className="inline-flex items-center gap-2.5 px-8 py-4 bg-foro-pink text-white font-bold rounded-full hover:bg-foro-pink-dark transition-all duration-200 shadow-lg shadow-foro-pink/25 hover:shadow-xl hover:scale-[1.03] text-base"
           >
             <Download className="w-5 h-5" aria-hidden />
-            Descargar plantilla de formato
+            Descargar plantilla oficial
           </a>
           <p className="mt-3 text-xs text-gray-400">
             Formato Springer APA 7 · Archivo Word (.docx) · Acceso libre
+          </p>
+          <p className="mt-4">
+            <a href="/#convocatoria" className="text-sm font-semibold text-foro-pink hover:underline">
+              Ver convocatoria completa y lineamientos →
+            </a>
           </p>
         </div>
       </div>
