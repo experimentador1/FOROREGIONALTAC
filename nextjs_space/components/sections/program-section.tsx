@@ -52,7 +52,7 @@ const events = [
   {
     time: '12:20 hrs',
     title: 'IA para la higiene dental. Artefacto de aprendizaje experiencial para la higiene bucal infantil',
-    speaker: 'Gerardo Bulnes',
+    speaker: 'Gerardo Antonino Mendoza Bulnes',
     affiliation: 'Alumno de Posgrado · Universidad Juárez Autónoma de Tabasco',
     icon: FileText,
   },
