@@ -2,46 +2,80 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Clock, Mic2, MessageSquare, Award, Video } from 'lucide-react';
+import { Award, Mic2, FileText, Video } from 'lucide-react';
 
 const events = [
   {
-    time: '10:00 AM',
-    title: 'Ceremonia de Inauguración',
+    time: '10:00 hrs',
+    title: 'Palabras de bienvenida al evento',
+    speaker: 'Dra. Laura Beatríz Vidal Turrubiates',
+    affiliation: 'Directora de la DACyTI UJAT',
     icon: Award,
-    desc: 'Bienvenida por parte de la Dra. Laura Beatríz Vidal Turrubiates, Directora DACyTI UJAT',
     accent: true,
   },
   {
-    time: '10:30 AM',
-    title: 'Conferencia',
+    time: '10:15 hrs',
+    title: 'Conferencia magistral del foro',
+    speaker: 'Maestro Alfredo González Estrada',
+    affiliation: 'Moodle Expert',
     icon: Mic2,
-    desc: 'Moodle Expert Alfredo González Estrada, Egresado MTAC',
     accent: true,
   },
   {
-    time: '11:00 AM',
-    title: 'MESA 1',
-    icon: MessageSquare,
-    desc: 'Analíticas con equidad: más allá del algoritmo',
+    time: '11:00 hrs',
+    title: 'Humanizar la transformación digital: celular e inteligencia artificial generativa en la educación media superior',
+    speaker: 'Teresita de Jesús Camacho Gaspar',
+    affiliation: '',
+    icon: FileText,
   },
   {
-    time: '12:00 PM',
-    title: 'MESA 2',
-    icon: MessageSquare,
-    desc: 'Inteligencia artificial con saberes situados',
+    time: '11:20 hrs',
+    title: 'Uso sistemático frente a uso informal de la inteligencia artificial en la Educación Media Superior: impacto en el aprovechamiento académico en un bachillerato bivalente de México',
+    speaker: 'Jose Luis García Cruz',
+    affiliation: '',
+    icon: FileText,
   },
   {
-    time: '1:00 PM',
-    title: 'MESA 3',
-    icon: MessageSquare,
-    desc: 'Pedagogías posibles en la era de la IA',
+    time: '11:40 hrs',
+    title: 'Motivación hacia el uso de inteligencia artificial en estudiantes de Ciencias de la comunicación desde la teoría de las expectativas',
+    speaker: 'Pablo Martínez López',
+    affiliation: 'Universidad Autónoma del Estado de Hidalgo',
+    icon: FileText,
   },
   {
-    time: '2:00 PM',
-    title: 'Clausura del foro',
+    time: '12:00 hrs',
+    title: 'La inteligencia artificial en el aula universitaria: acción humana, inclusión y gobernanza',
+    speaker: 'Yeny Jiménez Izquierdo',
+    affiliation: 'Universidad Juárez Autónoma de Tabasco',
+    icon: FileText,
+  },
+  {
+    time: '12:20 hrs',
+    title: 'IA para la higiene dental. Artefacto de aprendizaje experiencial para la higiene bucal infantil',
+    speaker: 'Gerardo Bulnes',
+    affiliation: 'Alumno de Posgrado · Universidad Juárez Autónoma de Tabasco',
+    icon: FileText,
+  },
+  {
+    time: '12:40 hrs',
+    title: 'Agente Conversacional Afectivo en aulas masificadas',
+    speaker: 'Rafael de Jesús Torres Enríquez',
+    affiliation: 'Alumno de Posgrado · Universidad Juárez Autónoma de Tabasco',
+    icon: FileText,
+  },
+  {
+    time: '13:00 hrs',
+    title: 'Problemas de la enseñanza del aprendizaje motor y respuestas mediante la IA de la Visión Computacional: avance de una investigación en la UJAT',
+    speaker: 'Carlos Manuel Alpuche Ortiz',
+    affiliation: 'Alumno de Posgrado · Universidad Juárez Autónoma de Tabasco',
+    icon: FileText,
+  },
+  {
+    time: '13:20 hrs',
+    title: 'Cierre oficial del Foro Regional TAC-IA',
+    speaker: 'Clausura del evento',
+    affiliation: '',
     icon: Award,
-    desc: 'Cierre oficial del Foro Regional TAC-IA',
     accent: true,
   },
 ];
@@ -68,7 +102,6 @@ export function ProgramSection() {
           </div>
         </motion.div>
 
-        {/* Fecha del evento */}
         <div className="flex justify-center mb-10">
           <div className="inline-flex bg-white dark:bg-gray-900 rounded-full px-8 py-3.5 shadow-md">
             <span className="text-sm font-semibold text-foro-pink">
@@ -77,7 +110,6 @@ export function ProgramSection() {
           </div>
         </div>
 
-        {/* Timeline */}
         <div className="relative">
           <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-foro-pink via-foro-pink/50 to-transparent" />
           <div className="space-y-4">
@@ -85,10 +117,10 @@ export function ProgramSection() {
               const Icon = event.icon;
               return (
                 <motion.div
-                  key={i}
+                  key={`${event.time}-${event.speaker}`}
                   initial={{ opacity: 0, x: -20 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.4, delay: i * 0.08 }}
+                  transition={{ duration: 0.4, delay: i * 0.06 }}
                   className="relative pl-16 sm:pl-20"
                 >
                   <div
@@ -118,8 +150,11 @@ export function ProgramSection() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <span className="text-xs font-mono font-semibold text-foro-pink">{event.time}</span>
-                        <h4 className="font-display font-semibold mt-1">{event.title}</h4>
-                        <p className="text-sm text-muted-foreground mt-1">{event.desc}</p>
+                        <h4 className="font-display font-semibold mt-1 text-gray-900">{event.speaker}</h4>
+                        {event.affiliation ? (
+                          <p className="text-xs text-muted-foreground mt-0.5">{event.affiliation}</p>
+                        ) : null}
+                        <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{event.title}</p>
                       </div>
                     </div>
                   </div>
@@ -135,7 +170,7 @@ export function ProgramSection() {
           transition={{ delay: 0.6 }}
           className="text-center text-xs text-muted-foreground mt-10"
         >
-          Horario: 10:00 AM – 2:00 PM (hora centro de México) • Programa sujeto a cambios
+          Horario: 10:00 – 13:20 hrs (hora centro de México) • Programa sujeto a cambios
         </motion.p>
       </div>
     </section>
