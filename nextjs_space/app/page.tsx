@@ -5,7 +5,6 @@ import { ConvocatoriaSection } from '@/components/sections/convocatoria-section'
 import { AboutSection } from '@/components/sections/about-section';
 import { AxesSection } from '@/components/sections/axes-section';
 import { ProgramSection } from '@/components/sections/program-section';
-import { SpeakersSection } from '@/components/sections/speakers-section';
 import { CTASection } from '@/components/sections/cta-section';
 
 export default function HomePage() {
@@ -17,7 +16,6 @@ export default function HomePage() {
       <AboutSection />
       <AxesSection />
       <ProgramSection />
-      <SpeakersSection />
       <CTASection />
       <Footer />
     </main>

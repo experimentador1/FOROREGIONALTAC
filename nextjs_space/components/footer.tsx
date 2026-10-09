@@ -9,7 +9,6 @@ const navLinks = [
   { href: '/#convocatoria', label: 'Convocatoria' },
   { href: '/#ejes', label: 'Ejes Temáticos' },
   { href: '/#programa', label: 'Programa' },
-  { href: '/#ponentes', label: 'Mesas de Trabajo' },
   { href: '/registro', label: 'Registro' },
   { href: '/contacto', label: 'Contacto' },
 ];
@@ -74,27 +73,19 @@ export function Footer() {
 
           {/* Ponencias */}
           <div className="md:col-span-2">
-            <p className="text-white text-sm font-semibold mb-4">Mesas de trabajo</p>
+            <p className="text-white text-sm font-semibold mb-4">Contribuciones</p>
             <ul className="space-y-2">
               <li>
-                <Link href="/ponencias" className="text-sm text-foro-pink hover:text-foro-pink-dark transition-colors duration-150">
-                  Mesa 1 — Analíticas con equidad
+                <Link href="/#programa" className="text-sm text-foro-pink hover:text-foro-pink-dark transition-colors duration-150">
+                  Programa del evento
                 </Link>
               </li>
               <li>
                 <Link href="/ponencias" className="text-sm text-foro-pink hover:text-foro-pink-dark transition-colors duration-150">
-                  Mesa 2 — IA con saberes situados
-                </Link>
-              </li>
-              <li>
-                <Link href="/ponencias" className="text-sm text-foro-pink hover:text-foro-pink-dark transition-colors duration-150">
-                  Mesa 3 — Pedagogías posibles
+                  Envío de ponencias
                 </Link>
               </li>
             </ul>
-            <p className="text-xs text-gray-600 mt-3 leading-snug">
-              Dictaminación doble ciego
-            </p>
             <a
               href={TEMPLATE_PONENCIA}
               download="PrototipoSpringer_APA7.docx"

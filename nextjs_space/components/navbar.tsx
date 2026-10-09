@@ -11,7 +11,6 @@ const navLinks = [
   { href: '/#convocatoria', label: 'Convocatoria' },
   { href: '/#ejes', label: 'Ejes' },
   { href: '/#programa', label: 'Programa' },
-  { href: '/#ponentes', label: 'Mesas' },
   { href: '/contacto', label: 'Contacto' },
 ];
 
