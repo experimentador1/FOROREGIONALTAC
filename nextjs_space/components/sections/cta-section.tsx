@@ -62,7 +62,7 @@ export function CTASection() {
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white/12 backdrop-blur-sm text-white font-bold rounded-full hover:bg-white/22 transition-all duration-200 border-2 border-white/30 cursor-pointer"
               >
                 <ExternalLink className="w-4 h-4" aria-hidden />
-                Enviar ponencia — ver mesas
+                Enviar ponencia
               </Link>
             </div>
           </div>
