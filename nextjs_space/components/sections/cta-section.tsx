@@ -30,19 +30,18 @@ export function CTASection() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <span className="badge-pill bg-white/15 text-white/90 mb-6 inline-flex">
-            Participación abierta · Acceso gratuito
+            Participación cerrada
           </span>
 
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight mb-5 leading-tight">
-            ¿Listo para participar?
+            Participación cerrada
           </h2>
           <p className="text-white/80 max-w-xl mx-auto text-lg mb-6 leading-relaxed">
-            Únete como asistente o comparte tu investigación. El foro es el espacio
-            donde las voces de la región Sur-Sureste cobran protagonismo.
+            El periodo de registro y envío de contribuciones ha concluido.
+            Agradecemos el interés de la comunidad académica de la región Sur-Sureste.
           </p>
           <p className="text-white/70 max-w-lg mx-auto text-sm mb-10 leading-relaxed">
-            Convocatoria abierta para ponencias (máx. 4,000 palabras) y textos breves
-            (máx. 800 palabras). Usa la plantilla oficial del foro.
+            La convocatoria de ponencias y textos breves se encuentra cerrada.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 max-w-2xl mx-auto">
@@ -68,7 +67,7 @@ export function CTASection() {
           </div>
 
           <p className="mt-8 text-white/55 text-sm">
-            Fecha límite de recepción de ponencias: <strong className="text-white/90">20 de septiembre de 2026</strong>
+            Recepción de ponencias concluida el <strong className="text-white/90">20 de septiembre de 2026</strong>
           </p>
         </motion.div>
       </div>

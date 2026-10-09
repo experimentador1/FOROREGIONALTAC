@@ -65,7 +65,7 @@ export default function PonenciasPage() {
       {/* Hero */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 py-14 text-center">
-          <p className="badge-pill bg-foro-pink/10 text-foro-pink mb-5">Convocatoria abierta</p>
+          <p className="badge-pill bg-foro-pink/10 text-foro-pink mb-5">Convocatoria cerrada</p>
           <h1 className="font-display text-3xl sm:text-4xl font-bold tracking-tight mb-4 text-gray-900">
             Envío de Ponencias
           </h1>
