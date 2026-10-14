@@ -10,7 +10,7 @@ const navLinks = [
   { href: '/#inicio', label: 'Inicio' },
   { href: '/#convocatoria', label: 'Convocatoria' },
   { href: '/#ejes', label: 'Ejes' },
-  { href: '/#programa', label: 'Programa' },
+  { href: '/#programa', label: 'Agenda del Foro' },
   { href: '/contacto', label: 'Contacto' },
 ];
 

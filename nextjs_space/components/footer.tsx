@@ -8,7 +8,7 @@ import { TEMPLATE_PONENCIA } from '@/lib/forms';
 const navLinks = [
   { href: '/#convocatoria', label: 'Convocatoria' },
   { href: '/#ejes', label: 'Ejes Temáticos' },
-  { href: '/#programa', label: 'Programa' },
+  { href: '/#programa', label: 'Agenda del Foro' },
   { href: '/registro', label: 'Registro' },
   { href: '/contacto', label: 'Contacto' },
 ];
