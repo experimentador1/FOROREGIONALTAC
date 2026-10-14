@@ -119,7 +119,7 @@ export function ProgramSection() {
           </h2>
           <div className="inline-flex items-center gap-2 bg-foro-pink/10 px-4 py-2 rounded-full text-sm text-foro-pink font-medium">
             <Video className="w-4 h-4" />
-            Modalidad virtual sincrónica &middot; Google Meet / YouTube Live
+            Modalidad virtual sincrónica &middot; Mediante Zoom
           </div>
         </motion.div>
 
