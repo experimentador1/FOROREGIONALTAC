@@ -38,7 +38,7 @@ const events = [
   {
     time: '11:40 hrs',
     title: 'Motivación hacia el uso de inteligencia artificial en estudiantes de Ciencias de la comunicación desde la teoría de las expectativas',
-    speaker: 'Pablo Martínez López',
+    speaker: 'Juan Pablo Martínez López',
     affiliation: 'Universidad Autónoma del Estado de Hidalgo',
     icon: FileText,
   },
@@ -72,6 +72,27 @@ const events = [
   },
   {
     time: '13:20 hrs',
+    title: 'Inteligencia artificial en la Planeación Docente: Experiencia en Educación Secundaria',
+    speaker: 'Monserrat González Tirado',
+    affiliation: '',
+    icon: FileText,
+  },
+  {
+    time: '13:40 hrs',
+    title: 'Uso ético y transparente de la IAGen en EMS: diagnóstico para una intervención pedagógica situada en estudiantes del CBTis No.163',
+    speaker: 'Christian Jazmín Canseco Torrano',
+    affiliation: '',
+    icon: FileText,
+  },
+  {
+    time: '14:00 hrs',
+    title: 'Ciudadanía Digital Responsable: El Pensamiento Filosófico y la Argumentación Crítica ante la Desinformación en Estudiantes de Tres Planteles de Educación Media Superior de Tabasco',
+    speaker: 'Gerardo López Martínez',
+    affiliation: '',
+    icon: FileText,
+  },
+  {
+    time: '14:20 hrs',
     title: 'Cierre oficial del Foro Regional TAC-IA',
     speaker: 'Clausura del evento',
     affiliation: '',
@@ -170,7 +191,7 @@ export function ProgramSection() {
           transition={{ delay: 0.6 }}
           className="text-center text-xs text-muted-foreground mt-10"
         >
-          Horario: 10:00 – 13:20 hrs (hora centro de México) • Programa sujeto a cambios
+          Horario: 10:00 – 14:20 hrs (hora centro de México) • Programa sujeto a cambios
         </motion.p>
       </div>
     </section>
